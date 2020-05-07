@@ -10,11 +10,19 @@ module "azure_bastion" {
     source  = "aztfmod/azure_bastion/azurerm"
     version = "0.x.y"
     
-    resource_group_name   = var.rg
-    location              = var.locations
-    tags                  = var.tags
-    prefix                = var.prefix
-    logs_retention        = var.retention
+    bastion_config                   = local.bastion_config
+  
+    name                             = local.bastion_config.name
+    resource_group_name              = azurerm_resource_group.rg_test.name
+    subnet_id                        = lookup(module.vnet_test.vnet_subnets, "AzureBastionSubnet", null)
+    public_ip_address_id             = module.bastion_pip.id
+    location                         = local.location
+    tags                             = local.tags
+    
+    convention                       = local.convention 
+    diagnostics_map                  = module.diags_test.diagnostics_map
+    log_analytics_workspace          = module.la_test.object
+    diagnostics_settings             = local.bastion_config.diagnostics
 }
 ```
 
