@@ -26,25 +26,8 @@ module "azure_bastion" {
 }
 ```
 
-## Inputs 
-
-| Name | Type | Default | Description |
-| -- | -- | -- | -- |
-| enable_bastion | bool | True | (Optional) Determine to deploy Bastion for the configuration. |
-| subnet_id | string | None | (Required) Subnet ID to plug Azure Bastion. |
-| public_ip_address_id | string | None | (Required) ID of hte Public IP address to use. |
-| bastion_config | object | None |(Required) Bastion configuration object. | 
-| resource_group_name | string | None | (Required) Name of the resource group where to create the resource. Changing this forces a new resource to be created. |
-| name | string | None | (Required) Name for the objects created (before naming convention applied.) |
-| location | string | None | (Required) Specifies the Azure location to deploy the resource. Changing this forces a new resource to be created.  |
-| tags | map | None | (Required) Map of tags for the deployment.  |
-| convention | string | None | (Required) Naming convention to be used (check at the naming convention module for possible values).  |
-| prefix | string | None | (Optional) Prefix to be used. |
-| postfix | string | None | (Optional) Postfix to be used. |
-| max_length | string | None | (Optional) maximum length to the name of the resource. |
-| log_analytics_workspace | string | None | Log Analytics Workspace. | 
-| diagnostics_map | map | None | Map with the diagnostics repository information.  | 
-| diagnostics_settings | object | None | Map with the diagnostics settings. See the required structure in the following example or in the diagnostics module documentation. | 
+<!--- BEGIN_TF_DOCS --->
+<!--- END_TF_DOCS --->
 
 ## Parameters
 
@@ -71,11 +54,3 @@ bastion_config = {
         }
     }
 ```
-
-## Outputs
-
-| Name | Type | Description | 
-| -- | -- | -- | 
-| id | map | Returns the id of the bastion configuration |
-| name | map | Returns the name of the bastion configuration |
-| object | map | Returns the object of the bastion configuration |

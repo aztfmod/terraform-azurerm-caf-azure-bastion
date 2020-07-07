@@ -63,5 +63,5 @@ variable "bastion_config" {
 }
 
 variable "public_ip_address_id" {
-  description = "(Required) ID of hte Public IP address to use."
+  description = "(Required) ID of the Public IP address to use."
 }
