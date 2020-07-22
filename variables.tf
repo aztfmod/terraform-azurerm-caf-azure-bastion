@@ -52,12 +52,6 @@ variable "subnet_id" {
   description = "(Required) Subnet ID to plug Azure Bastion."
 }
 
-variable "enable_bastion" {
-  description = "(Optional) Determine to deploy Bastion for the configuration."
-  type = bool
-  default = true
-}
-
 variable "bastion_config" {
   description = "(Required) Bastion configuration object"
 }
