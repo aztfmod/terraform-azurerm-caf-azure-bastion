@@ -46,7 +46,6 @@ No requirements.
 | convention | (Required) Naming convention method to use | `any` | n/a | yes |
 | diagnostics\_map | (Required) contains the SA and EH details for operations diagnostics | `any` | n/a | yes |
 | diagnostics\_settings | (Required) configuration object describing the diagnostics | `any` | n/a | yes |
-| enable\_bastion | (Optional) Determine to deploy Bastion for the configuration. | `bool` | `true` | no |
 | location | (Required) Specifies the Azure location to deploy the resource. Changing this forces a new resource to be created. | `any` | n/a | yes |
 | log\_analytics\_workspace | (Required) contains the log analytics workspace details for operations diagnostics | `any` | n/a | yes |
 | max\_length | (Optional) You can speficy a maximum length to the name of the resource | `string` | `""` | no |
