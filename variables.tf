@@ -52,16 +52,10 @@ variable "subnet_id" {
   description = "(Required) Subnet ID to plug Azure Bastion."
 }
 
-variable "enable_bastion" {
-  description = "(Optional) Determine to deploy Bastion for the configuration."
-  type = bool
-  default = true
-}
-
 variable "bastion_config" {
   description = "(Required) Bastion configuration object"
 }
 
 variable "public_ip_address_id" {
-  description = "(Required) ID of hte Public IP address to use."
+  description = "(Required) ID of the Public IP address to use."
 }
